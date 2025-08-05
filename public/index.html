@@ -20,13 +20,20 @@
         </div>        
 
         <div id="list-tasks-container">
-            <ul id="ul-task">
-                <li></li>
-            </ul>
+            <ul id="ul-task"></ul>
         </div>
 
     </div>
 
-    <script src="./assets/js/logic/logic.js"></script>
+    <script type="module">
+        import { UIController } from './assets/js/ui/ui.js';
+        
+        console.log('Script loaded, waiting for DOM...');
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM loaded, initializing UIController...');
+            new UIController();
+        });
+    </script>
 </body>
 </html>
